@@ -15,6 +15,8 @@ These are the main **tools** which are included:
 - uniscan
 - tor
 - proxychains
+- wireguard
+- openssh-server
 
 Note that you can _add/modify/delete_ configuration files by doing the related changes in the dockerfile.
 
@@ -34,20 +36,3 @@ docker build [-t your_image_name] .
 ##### More info
 
 Check out [Kali Linux on a Docker container: the easiest way](https://tsumarios.github.io/blog/2022/09/17/kali-linux-docker-container/) for more detailed info.
-
-#### Contacts
-
-- Email: marioraciti@pm.me
-- LinkedIn: linkedin.com/in/marioraciti
-- Twitter: twitter.com/tsumarios
-
-_If you want to support me, I would be grateful ❤️_
-
-<a href="https://www.buymeacoffee.com/tsumarios" target="_blank"><img
-        src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="40"></a>
-
-### Todos
-
-- Add some more useful tools, languages.
-
-**Enjoy!**
