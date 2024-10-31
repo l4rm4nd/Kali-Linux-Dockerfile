@@ -47,6 +47,15 @@ Alternatively, you can use my pre-built image `l4rm4nd/kali` from DockerHub.
 docker run --rm --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
 ```
 
+You can enable OpenSSH via the following means:
+```sh
+# change the root password; default is !Kali-Linux-on-Docker!
+passwd
+
+# start the openssh service; root login is already allowed in /etc/ssh/sshd_config
+service ssh restart
+```
+
 ##### More info
 
 Check out [Kali Linux on a Docker container: the easiest way](https://tsumarios.github.io/blog/2022/09/17/kali-linux-docker-container/) for more detailed info.
