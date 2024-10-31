@@ -67,4 +67,4 @@ ssh root@<YOUR-IP> -p 2222
 
 ##### More info
 
-Check out [Kali Linux on a Docker container: the easiest way](https://tsumarios.github.io/blog/2022/09/17/kali-linux-docker-container/) for more detailed info.
+Check out [Kali Linux Official Docker Images](https://www.kali.org/docs/containers/official-kalilinux-docker-images/) for more detailed info.
