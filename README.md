@@ -49,11 +49,17 @@ docker run --rm --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4n
 
 You can enable OpenSSH via the following means:
 ```sh
-# change the root password; default is !Kali-Linux-on-Docker!
+# run container and map openssh port
+docker run --rm -p 2222:22 --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
+
+# within container: change the root password; default is !Kali-Linux-on-Docker!
 passwd
 
-# start the openssh service; root login is already allowed in /etc/ssh/sshd_config
+# within container: start the openssh service; root login is already allowed in /etc/ssh/sshd_config
 service ssh restart
+
+# connect from other machines
+ssh root@<YOUR-IP> -p 2222
 ```
 
 ##### More info
