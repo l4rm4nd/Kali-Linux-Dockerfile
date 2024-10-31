@@ -55,10 +55,13 @@ docker run --rm -p 2222:22 -v ./kali-volume-data:/root --cap-add=NET_ADMIN --cap
 # within container: change the root password; default is `!Kali-Linux-on-Docker!`
 passwd
 
+# optional: add your ssh pubkey to /root/.ssh/authorized_keys if you plan on accessing ssh from public class IP ranges and not local lan
+
 # within container: start the openssh service; root login is already allowed in /etc/ssh/sshd_config
 service ssh restart
 
 # connect from other machines
+# pw auth allowed from private class ranges; otherwise pubkey auth!
 ssh root@<YOUR-IP> -p 2222
 ```
 
