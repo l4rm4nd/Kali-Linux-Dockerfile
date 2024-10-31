@@ -23,10 +23,10 @@ COPY config/proxychains.conf /etc/proxychains.conf
 # Install wireguard and openssh
 RUN apt -y install wireguard openssh-server procps
 
-# allow ssh root login
-RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+# copy ssh configuration
+COPY config/sshd_config /etc/ssh/sshd_config
 
-# change root pw
+# change root pw for ssh logins from local lan
 RUN echo '!Kali-Linux-on-Docker!' | passwd --stdin root 
 
 # Install ZSH shell with custom settings and set it as default shell
