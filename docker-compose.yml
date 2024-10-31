@@ -1,0 +1,16 @@
+services:
+
+  kali:
+    image: l4rm4nd/kali:latest
+    container_name: kali
+    hostname: kali
+    restart: unless-stopped
+    ports:
+      - 2222:22/tcp # ssh (optional)
+    volumes:
+      - ./kali-volume-data:/root
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    tty: true
+    stdin_open: true
