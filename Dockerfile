@@ -8,7 +8,7 @@ WORKDIR /root
 RUN apt -y update && DEBIAN_FRONTEND=noninteractive apt -y dist-upgrade && apt -y autoremove && apt clean
 
 # Install common and useful tools
-RUN apt -y install curl wget vim git net-tools whois netcat-traditional pciutils usbutils dnsutils resolvconf nano iproute2
+RUN apt -y install curl wget vim git net-tools whois netcat-traditional pciutils usbutils dnsutils nano iproute2
 
 # Install useful languages
 RUN apt -y install python3-pip golang nodejs npm
