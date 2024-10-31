@@ -8,7 +8,9 @@ services:
     ports:
       - 2222:22/tcp # ssh (optional)
     volumes:
-      - ./kali-volume-data:/root
+      - ./kali-volume-data:/root # persist root data
+      #- ./wg0.conf:/etc/wireguard/wg0.conf:ro # custom wireguard config
+      #- ./authorized_keys:/root/.ssh/authorized_keys:ro
     cap_add:
       - NET_ADMIN
       - NET_RAW
