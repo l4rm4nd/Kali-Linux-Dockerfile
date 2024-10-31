@@ -11,7 +11,7 @@ RUN apt -y update && DEBIAN_FRONTEND=noninteractive apt -y dist-upgrade && apt -
 RUN apt -y install curl wget vim git net-tools whois netcat-traditional pciutils usbutils dnsutils nano iproute2
 
 # Install useful languages
-RUN apt -y install python3-pip golang nodejs npm
+RUN apt -y install python3-pip golang
 
 # Install Kali Linux "Top 10" metapackage and a few cybersecurity useful tools
 RUN DEBIAN_FRONTEND=noninteractive apt -y install kali-tools-top10 exploitdb man-db dirb nikto wpscan uniscan lsof apktool dex2jar ltrace strace binwalk
