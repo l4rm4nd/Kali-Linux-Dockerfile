@@ -23,20 +23,27 @@ Note that you can _add/modify/delete_ configuration files by doing the related c
 ### Other useful things
 
 Also [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) is installed as default shell. You can add some changes directly in the [.zshrc](https://github.com/zMrSec/Kali-Linux-Dockerfile/blob/master/config/.zshrc) file, such as setting your favourite theme.
-_Python-Pip_ and _Golang_ are included, too. Finally, WireGuard and a OpenSSH server was installed, which can be used if necessary. For WireGuard and Nmap to work, the container must likely run with `--privileged` and/or `--cap-add=NET_ADMIN --cap-add=NET_RAW --sysctl net.ipv4.ip_forward=1`.
+_Python-Pip_ and _Golang_ are included, too. Finally, WireGuard and a OpenSSH server was installed, which can be used if necessary. 
+
+For WireGuard and Nmap to work, the container must likely run with `--privileged` and/or `--cap-add=NET_ADMIN --cap-add=NET_RAW --sysctl net.ipv4.ip_forward=1`.
 
 ### Usage
 
-In order to build an _image_ from this dockerfile, just go on the folder where it is located and simple open your favourite **Terminal**, typing as follows:
-
 ```sh
+# clone this repo
+git clone https://github.com/l4rm4nd/Kali-Linux-Dockerfile && cd Kali-Linux-Dockerfile
+
+# build the image
 docker build -t my-kali .
+
+# run the container and spawn tty shell
+docker run --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive my-kali
 ```
 
-Then spawn a TTY shell into the Kali container:
+Alternatively, you can use my pre-built image `l4rm4nd/kali` from DockerHub.
 
 ```sh
-docker run --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive my-kali
+docker run --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
 ```
 
 ##### More info
