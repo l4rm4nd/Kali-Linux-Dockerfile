@@ -38,13 +38,13 @@ git clone https://github.com/l4rm4nd/Kali-Linux-Dockerfile && cd Kali-Linux-Dock
 docker build -t my-kali .
 
 # run the container and spawn tty shell
-docker run --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive my-kali
+docker run --rm --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive my-kali
 ```
 
 Alternatively, you can use my pre-built image `l4rm4nd/kali` from DockerHub.
 
 ```sh
-docker run --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
+docker run --rm --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
 ```
 
 ##### More info
