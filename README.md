@@ -30,6 +30,8 @@ _Python-Pip_ and _Golang_ are included, too. Finally, WireGuard and a OpenSSH se
 
 ### Usage
 
+#### Custom Image Building
+
 ```sh
 # clone this repo
 git clone https://github.com/l4rm4nd/Kali-Linux-Dockerfile && cd Kali-Linux-Dockerfile
@@ -41,13 +43,30 @@ docker build -t my-kali .
 docker run --rm --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive my-kali
 ```
 
+#### External DockerHub Image
+
 Alternatively, you can use my pre-built image `l4rm4nd/kali` from DockerHub.
+
+Either via Docker Run:
 
 ```sh
 docker run --rm --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
 ```
 
+or using the provided Docker Compose file:
+
+```sh
+# spawn the stack
+docker compose up -d
+
+# exec into container
+docker exec -it kali zsh
+```
+
+#### Enabling OpenSSH
+
 You can enable OpenSSH via the following means:
+
 ```sh
 # run container and map openssh port
 docker run --rm -p 2222:22 -v ./kali-volume-data:/root --cap-add=NET_ADMIN --cap-add=NET_RAW --tty --interactive l4rm4nd/kali:latest
