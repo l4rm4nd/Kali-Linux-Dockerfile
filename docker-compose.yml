@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     ports:
       - 2222:22/tcp # ssh (optional)
-    volumes:
+    #volumes:
       #- ./kali-volume-data:/root # persist root data
       #- ./wg0.conf:/etc/wireguard/wg0.conf:ro # custom vpn config
       #- ./authorized_keys:/root/.ssh/authorized_keys:ro # custom ssh keys
