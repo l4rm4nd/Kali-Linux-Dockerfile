@@ -14,5 +14,6 @@ services:
     cap_add:
       - NET_ADMIN
       - NET_RAW
+    #privileged: true # enable this for wireguard usage
     tty: true
     stdin_open: true
