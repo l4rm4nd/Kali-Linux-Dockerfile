@@ -26,7 +26,7 @@ Also [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) is ins
 _Python-Pip_ and _Golang_ are included, too. Finally, WireGuard and a OpenSSH server was installed, which can be used if necessary. 
 
 - For Nmap to work, the container must run with `--cap-add=NET_ADMIN --cap-add=NET_RAW`.
-- For WireGuard to work, you likely want to run with `--cap-add=NET_ADMIN --cap-add=NET_RAW --cap-add=SYS_MODULE --sysctl net.ipv4.ip_forward=1` or just `--privileged`.
+- For WireGuard to work, you have to run as `--privileged`.
 
 ### Usage
 
