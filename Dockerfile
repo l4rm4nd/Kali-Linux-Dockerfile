@@ -22,8 +22,6 @@ COPY config/proxychains.conf /etc/proxychains.conf
 
 # Install wireguard and openssh
 RUN apt -y install wireguard openssh-server procps
-# Install resolvconf for wireguard
-RUN apt -y install resolvconf; exit 0
 
 # copy ssh configuration
 COPY config/sshd_config /etc/ssh/sshd_config
@@ -35,5 +33,8 @@ RUN echo '!Kali-Linux-on-Docker!' | passwd --stdin root
 RUN apt -y install zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 COPY config/.zshrc .
+
+# Install resolvconf for wireguard
+RUN apt -y install resolvconf; exit 0
 
 ENTRYPOINT ["/bin/zsh"]
