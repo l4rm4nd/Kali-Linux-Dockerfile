@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.2...v0.1.3) (2024-11-04)
+
+
+### Bug Fixes
+
+* install resolvconf for wireguard ([d78f958](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/commit/d78f958cce4c6bdb6664a55f4bd90c25127248d6))
+
 ## [0.1.2](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.1...v0.1.2) (2024-10-31)
 
 
