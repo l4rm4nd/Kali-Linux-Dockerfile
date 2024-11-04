@@ -22,6 +22,8 @@ COPY config/proxychains.conf /etc/proxychains.conf
 
 # Install wireguard and openssh
 RUN apt -y install wireguard openssh-server procps
+# Install resolvconf for wireguard
+RUN apt -y install resolvconf; exit 0
 
 # copy ssh configuration
 COPY config/sshd_config /etc/ssh/sshd_config
