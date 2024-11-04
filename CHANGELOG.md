@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.3...v0.1.4) (2024-11-04)
+
+
+### Bug Fixes
+
+* resolvconf ([2f8945d](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/commit/2f8945d2eeddb2636bd6f154c6ddf96cd25d4f7b))
+
 ## [0.1.3](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.2...v0.1.3) (2024-11-04)
 
 
