@@ -1,3 +1,10 @@
+## [0.1.6](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.5...v0.1.6) (2024-11-15)
+
+
+### Bug Fixes
+
+* setcap nmap ([56fdb0a](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/commit/56fdb0af4036312203d8e38b315d89043cfd2312))
+
 ## [0.1.5](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.4...v0.1.5) (2024-11-14)
 
 
@@ -25,11 +32,4 @@
 ### Bug Fixes
 
 * remove dsa key ([3557a80](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/commit/3557a80f555b76d92c0bef61749a7fdd085cc987))
-
-## [0.1.1](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/compare/v0.1.0...v0.1.1) (2024-10-31)
-
-
-### Bug Fixes
-
-* define sshd_config ([9672f76](https://github.com/l4rm4nd/Kali-Linux-Dockerfile/commit/9672f7603ab2a29b878eff588d2b850f8913b435))
 
