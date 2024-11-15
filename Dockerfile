@@ -29,6 +29,9 @@ COPY config/sshd_config /etc/ssh/sshd_config
 # change root pw for ssh logins from local lan
 RUN echo '!Kali-Linux-on-Docker!' | passwd --stdin root 
 
+# fix capabilities for nmap
+RUN setcap cap_net_raw,cap_net_bind_service+eip $(which nmap)
+
 # Install ZSH shell with custom settings and set it as default shell
 RUN apt -y install zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
